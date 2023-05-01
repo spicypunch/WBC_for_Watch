@@ -1,6 +1,8 @@
 ## When is the bus coming
 
-WBC는 When is the bus coming의 약자로 버스가 언제 도착하는지 확인할 수 있는 앱입니다.
+WBC_for_Watch는 내가 즐겨찾기 한 버스의 도착 예정 시간을 갤럭시 워치에서 확인 가능할 수 있는 앱입니다.
+
+WBC: https://github.com/spicypunch/WBC
 <br>
 <br>
 <br>
