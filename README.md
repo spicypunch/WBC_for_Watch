@@ -19,7 +19,7 @@ WBC: https://github.com/spicypunch/WBC
 ### UI
 --------
 #### 테스트 계정에 임의의 버스 즐겨찾기 추가
-![Screenshot_20230502_003636_ ](https://user-images.githubusercontent.com/72846127/235485467-b873203b-edef-4faf-9fb0-0caad8a035f7.jpg)
+![Screenshot_20230502_003636_ ](https://user-images.githubusercontent.com/72846127/235486260-f93a51e1-3ce1-4bdc-b9dd-fdbc5286ae19.jpg)
 
 
 #### 로그인 및 즐겨찾기 확인
