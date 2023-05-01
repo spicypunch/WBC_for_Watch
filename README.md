@@ -12,6 +12,7 @@ WBC: https://github.com/spicypunch/WBC
 - Retrofit을 통한 버스 도착 정보 API를 사용하였습니다.
 - Databindig: xml 파일을 통해 선언적으로 데이터와 뷰를 바인딩합니다.
 - Firebase를 통해 스마트폰 앱에서 즐겨찾기 한 버스 정보를 가져옵니다.
+
 <br>
 <br>
 <br>
