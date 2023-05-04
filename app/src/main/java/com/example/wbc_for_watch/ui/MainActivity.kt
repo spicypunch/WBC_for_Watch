@@ -122,6 +122,7 @@ class MainActivity() : Activity() {
                 }
             }
         }
-            adapter.submitList(bookmarkList)
+
+            adapter.submitList(bookmarkList.distinct())
     }
 }
