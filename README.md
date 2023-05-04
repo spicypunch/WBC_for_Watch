@@ -20,6 +20,7 @@ WBC_for_Watch는 내가 즐겨찾기 한 버스의 도착 예정 시간을 갤�
 - Retrofit을 통한 버스 도착 정보 API를 사용하였습니다.
 - Databindig: xml 파일을 통해 선언적으로 데이터와 뷰를 바인딩합니다.
 - Firebase를 통해 스마트폰 앱에서 즐겨찾기 한 버스 정보를 가져옵니다.
+- WearableRecyclerView를 사용했고 ListAdapter 상속받아 사용하고 있습니다.
 
 <br>
 <br>
