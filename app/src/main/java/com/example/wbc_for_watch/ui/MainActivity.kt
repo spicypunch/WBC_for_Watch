@@ -23,8 +23,6 @@ class MainActivity() : Activity() {
     private var firebaseList: MutableList<BookmarkEntity> = mutableListOf()
     private var apiList: MutableList<BusArrivalResponse> = mutableListOf()
     private var bookmarkList: MutableList<BusInfoEntity> = mutableListOf()
-    var cnt = 0
-
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -39,6 +37,11 @@ class MainActivity() : Activity() {
         setContentView(binding.root)
         binding.recyclerviewBookmark.adapter = adapter
         binding.recyclerviewBookmark.layoutManager = LinearLayoutManager(this)
+
+        binding.btnRefresh.setOnClickListener {
+            bookmarkList.clear()
+            getMyBookmark()
+        }
 
         binding.btnLogout.setOnClickListener {
             FirebaseAuth.getInstance().signOut()
@@ -124,5 +127,6 @@ class MainActivity() : Activity() {
         }
 
             adapter.submitList(bookmarkList.distinct())
+        Log.e("tag", bookmarkList.toString())
     }
 }
