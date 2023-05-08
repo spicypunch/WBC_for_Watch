@@ -1,6 +1,6 @@
-package com.example.wbc_for_watch.retrofit
+package com.jm.wbc_for_watch.retrofit
 
-import com.example.wbc_for_watch.data.BusArrivalResponse
+import com.jm.wbc_for_watch.data.BusArrivalResponse
 import retrofit2.Call
 import retrofit2.http.GET
 import retrofit2.http.Query

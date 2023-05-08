@@ -1,4 +1,4 @@
-package com.example.wbc_for_watch.ui
+package com.jm.wbc_for_watch.ui
 
 import android.util.Log
 import android.view.LayoutInflater
@@ -6,8 +6,8 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
-import com.example.wbc_for_watch.data.BusInfoEntity
-import com.example.wbc_for_watch.databinding.ItemBookmarkBinding
+import com.jm.wbc_for_watch.data.BusInfoEntity
+import com.jm.wbc_for_watch.databinding.ItemBookmarkBinding
 
 class Adapter() : ListAdapter<BusInfoEntity, Adapter.MyViewHolder>(diffUtil){
 

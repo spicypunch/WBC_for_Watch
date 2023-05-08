@@ -1,4 +1,4 @@
-package com.example.wbc_for_watch.ui
+package com.jm.wbc_for_watch.ui
 
 import android.app.Activity
 import android.content.Intent
@@ -6,13 +6,14 @@ import android.os.Bundle
 import android.util.Log
 import android.widget.Toast
 import androidx.recyclerview.widget.LinearLayoutManager
-import com.example.wbc_for_watch.data.*
-import com.example.wbc_for_watch.databinding.ActivityMainBinding
-import com.example.wbc_for_watch.retrofit.BusService
-import com.example.wbc_for_watch.retrofit.RetrofitConnection
+import com.jm.wbc_for_watch.databinding.ActivityMainBinding
+import com.jm.wbc_for_watch.retrofit.BusService
+import com.jm.wbc_for_watch.retrofit.RetrofitConnection
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.firestore.FirebaseFirestore
-import kotlinx.coroutines.delay
+import com.jm.wbc_for_watch.data.BookmarkEntity
+import com.jm.wbc_for_watch.data.BusArrivalResponse
+import com.jm.wbc_for_watch.data.BusInfoEntity
 import retrofit2.*
 
 class MainActivity() : Activity() {
@@ -69,7 +70,7 @@ class MainActivity() : Activity() {
                         firebaseList.add(item)
                     }
                     getBusArrivalTime()
-            }
+                }
                 .addOnFailureListener { e ->
                     Log.e("Failed to get Data", e.toString())
                 }
@@ -82,7 +83,7 @@ class MainActivity() : Activity() {
         }
     }
 
-    private fun getBusArrivalTimeAPI(stationID : String) {
+    private fun getBusArrivalTimeAPI(stationID: String) {
         val retrofit = RetrofitConnection.getInstance().create(BusService::class.java)
         retrofit.getBusArrivalTime(
             "Ly2IHtl1aGXioF/sk3QPO8m0vKzS0zMpHGsaq3gfvRWJ7wHg1Pim+YJW7mchXjPxvt/s1BHsszlod8Qqv8CVVA==",
@@ -116,17 +117,17 @@ class MainActivity() : Activity() {
             for (j in i.body?.busArrivalList!!) {
                 for (k in firebaseList) {
                     if (k.routeID == j.routeId.toString() && k.stationID == j.stationId.toString()) {
-                        bookmarkList.add(BusInfoEntity(
-                            busNum = k.routeNm,
-                            predictTime1 = j.predictTime1,
-                            predictTime2 = j.predictTime2
-                        ))
+                        bookmarkList.add(
+                            BusInfoEntity(
+                                busNum = k.routeNm,
+                                predictTime1 = j.predictTime1,
+                                predictTime2 = j.predictTime2
+                            )
+                        )
                     }
                 }
             }
         }
-
-            adapter.submitList(bookmarkList.distinct())
-        Log.e("tag", bookmarkList.toString())
+        adapter.submitList(bookmarkList.distinct())
     }
 }

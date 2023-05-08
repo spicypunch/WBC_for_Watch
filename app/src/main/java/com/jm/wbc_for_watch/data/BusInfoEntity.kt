@@ -1,4 +1,4 @@
-package com.example.wbc_for_watch.data
+package com.jm.wbc_for_watch.data
 
 data class BusInfoEntity(
     var busNum: String,

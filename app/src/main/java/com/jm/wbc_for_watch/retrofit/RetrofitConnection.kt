@@ -1,9 +1,8 @@
-package com.example.wbc_for_watch.retrofit
+package com.jm.wbc_for_watch.retrofit
 
 import com.tickaroo.tikxml.TikXml
 import com.tickaroo.tikxml.retrofit.TikXmlConverterFactory
 import retrofit2.Retrofit
-import retrofit2.converter.gson.GsonConverterFactory
 
 class RetrofitConnection {
 

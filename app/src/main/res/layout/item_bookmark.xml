@@ -5,7 +5,7 @@
     <data>
         <variable
             name="data"
-            type="com.example.wbc_for_watch.data.BusInfoEntity" />
+            type="com.jm.wbc_for_watch.data.BusInfoEntity" />
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout

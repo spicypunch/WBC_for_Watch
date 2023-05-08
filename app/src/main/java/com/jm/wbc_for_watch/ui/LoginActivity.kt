@@ -1,9 +1,9 @@
-package com.example.wbc_for_watch.ui
+package com.jm.wbc_for_watch.ui
 
 import android.app.Activity
 import android.os.Bundle
 import android.widget.Toast
-import com.example.wbc_for_watch.databinding.ActivityLoginBinding
+import com.jm.wbc_for_watch.databinding.ActivityLoginBinding
 import com.google.firebase.auth.FirebaseAuth
 
 class LoginActivity : Activity() {
