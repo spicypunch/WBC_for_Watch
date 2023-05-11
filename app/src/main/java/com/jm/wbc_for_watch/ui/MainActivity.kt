@@ -114,16 +114,21 @@ class MainActivity() : Activity() {
 
     private fun filterBookmarkBus() {
         for (i in apiList) {
-            for (j in i.body?.busArrivalList!!) {
-                for (k in firebaseList) {
-                    if (k.routeID == j.routeId.toString() && k.stationID == j.stationId.toString()) {
-                        bookmarkList.add(
-                            BusInfoEntity(
-                                busNum = k.routeNm,
-                                predictTime1 = j.predictTime1,
-                                predictTime2 = j.predictTime2
+            if (i.body?.busArrivalList == null) {
+                Toast.makeText(this@MainActivity, "운행중인 버스가 없습니다.", Toast.LENGTH_SHORT).show()
+                break
+            } else {
+                for (j in i.body?.busArrivalList!!) {
+                    for (k in firebaseList) {
+                        if (k.routeID == j.routeId.toString() && k.stationID == j.stationId.toString()) {
+                            bookmarkList.add(
+                                BusInfoEntity(
+                                    busNum = k.routeNm,
+                                    predictTime1 = j.predictTime1,
+                                    predictTime2 = j.predictTime2
+                                )
                             )
-                        )
+                        }
                     }
                 }
             }
